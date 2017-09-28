@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MyLoginComponentComponent } from './my-login-component/my-login-component.component';
 import { CallbackComponent } from "./callBack/callback.component";
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home-component/home.component';
 
 // Routes
 import { ROUTES } from "./app.routes";
