@@ -40,4 +40,9 @@ export class AuthService {
     localStorage.setItem('expires_at', expiresAt);
   }
 
+  public isAuthenticated(): boolean {
+    const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
+    return new Date().getTime() < expiresAt;
+  }
+
 }
