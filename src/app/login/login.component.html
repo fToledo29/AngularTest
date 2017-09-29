@@ -1,0 +1,15 @@
+<div class="main-container" >
+    <div class="menu-content" *ngIf="!auth.isAuthenticated()">
+        <div class="option">
+            <button class="btn option"[routerLink]="['classicLogin']" href="#">
+                Classic Login
+            </button>
+        </div>
+            <br>
+        <div class="option">
+            <button class="btn option" (click)="auth.login()">
+                Auth0 Login
+            </button>
+        </div>
+    </div>
+</div>

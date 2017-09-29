@@ -1,0 +1,15 @@
+.avatar{
+    width: 150px;
+}
+
+.profile-area{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    border: 0px;
+    background-color: #F1F1F1;
+}
+.panel-body{
+    height: 100%;
+}
