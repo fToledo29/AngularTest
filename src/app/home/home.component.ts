@@ -12,9 +12,7 @@ export class HomeComponent implements OnInit {
          auth.handleAuthentication();
     }
 
-    ngOnInit() {
-        console.log(this.auth.isAuthenticated());
-        
+    ngOnInit() {     
     }
 
 }

@@ -9,13 +9,13 @@ import { CallbackComponent } from "./callBack/callback.component";
 import { ProfileComponent } from './profile-component/profile.component';
 import { HomeComponent } from './home/home.component';
 import { ClassicLoginComponent } from './classic-login/classic-login.component';
+import { LoginComponent } from './login/login.component';
 
 // Routes
 import { ROUTES } from "./app.routes";
 
 //Services
 import { AuthService } from "./auth/auth.service";
-import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
