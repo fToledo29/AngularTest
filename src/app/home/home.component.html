@@ -1,0 +1,18 @@
+<br>
+<div class="menu-content">
+    <div>
+            <!-- <img src="..." alt="..." class="bg-primary rounded" /> -->
+        <button class="btn btn-primary btn-margin"[routerLink]="['classicLogin']" href="#">
+            Classic Login
+        </button>
+    </div>
+<br>
+    <div>
+        <button class="btn btn-primary btn-margin" (click)="auth.login()">
+            Auth0 Login
+        </button>
+    </div>
+</div>
+
+
+    <router-outlet></router-outlet>

@@ -5,10 +5,11 @@ import { RouterModule } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 
 //Components
-import { AppComponent } from './app.component';
 import { MyLoginComponentComponent } from './my-login-component/my-login-component.component';
 import { CallbackComponent } from "./callBack/callback.component";
-import { HomeComponent } from './home-component/home.component';
+import { ProfileComponent } from './profile-component/profile.component';
+import { HomeComponent } from './home/home.component';
+import { ClassicLoginComponent } from './classic-login/classic-login.component';
 
 // Routes
 import { ROUTES } from "./app.routes";
@@ -19,10 +20,12 @@ import { AuthService } from "./auth/auth.service";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    HomeComponent,
     MyLoginComponentComponent,
     CallbackComponent,
-    HomeComponent
+    ProfileComponent,
+    HomeComponent,
+    ClassicLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,6 @@ import { AuthService } from "./auth/auth.service";
     RouterModule.forRoot(ROUTES)
   ],
   providers: [AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
