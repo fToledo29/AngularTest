@@ -1,2 +1,26 @@
-  <button *ngIf="auth.isAuthenticated()" type="button" class="badge badge-warning" (click)="auth.logout()">Log Out</button>
- <router-outlet></router-outlet> 
+<button *ngIf="auth.isAuthenticated()" type="button" class="badge badge-warning" (click)="auth.logout()">Log Out</button>
+
+<app-profile (fieldsValidation)="onfieldsValidation($event)" *ngIf="auth.isAuthenticated()"></app-profile>
+
+<router-outlet></router-outlet> 
+
+<div *ngIf="valid_Fields" class="field-messages-section">
+    <div class="alert alert-danger"  role="alert" *ngIf="showNicknameMessage">
+        <strong> {{this.nicknameMessage}}!</strong>
+        <button type="button" class="close" aria-label="Close" (click)="closeAlert('NickName')">
+                <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="showNameMessage">
+        <strong> {{nameMessage}}!</strong>
+        <button type="button" class="close" aria-label="Close" (click)="closeAlert('Name')">
+                <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="showGivenNameMessage">
+        <strong>{{givenNameMessage}}!</strong>
+        <button type="button" class="close" aria-label="Close" (click)="closeAlert('GivenName')">
+                <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
